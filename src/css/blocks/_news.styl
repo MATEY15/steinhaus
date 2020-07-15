@@ -1,0 +1,105 @@
+.section--news-prewiev
+	// padding-top 54px
+	padding-bottom 34px
+
+.news-prewiev
+	overflow hidden
+	.row
+		flex-wrap wrap
+
+.news-prewiev--item
+	margin-bottom 30px
+	padding-bottom 24px
+	max-width 330px
+	.news-images
+		position relative
+		display block
+		width 100%
+		min-height 230px
+		text-decoration none
+		font-size 0
+		margin-bottom 13px
+		img
+			position absolute
+			top 0
+			left 0
+			width 100%
+			height 100%
+			object-fit cover
+	h4
+		margin-bottom 16px
+		min-height 42px
+		a
+			color: #232323
+			font-size: 16px
+			font-weight: 600
+			line-height: 26.02px
+	.default--date-more
+		.date
+			color #bfbfbf
+		.more
+			color #737373
+
+.pagination
+	display flex
+	flex-direction row
+	justify-content center
+
+.nav-links
+	display flex
+	a
+		display flex
+		justify-content center
+		align-items center
+		width: 28px
+		height: 27px
+		color #000
+		border: 1px solid #eeeeee
+		background-color: #ffffff
+		trn(.2s)
+		&.pagin-hide
+			opacity 0
+			visibility hidden
+		&.active,
+		&:hover
+			border: 1px solid #8e8e8e
+			background: #8e8e8e
+			color #fff
+		&:last-child,
+		&:first-child
+			border none
+			&.active,
+			&:hover
+				border: none
+				background: transparent
+				color #000
+				
+		&:nth-last-child(2)
+			border-radius: 0 4px 4px 0
+		&:nth-child(2)
+			border-radius: 4px 0 0 4px
+
+.pagination-prev
+	img
+		transform rotateY(180deg)
+
+.news-post--prewiev
+	overflow hidden
+.post-prewiev
+	.post-prewiev--img
+		margin-bottom 40px
+		img
+			max-width 100%
+	p
+		color: #000000
+		font-size: 16px
+		font-weight: 300
+		line-height: 25px
+		margin-bottom 22px
+
+.more-posts
+	display block
+	color: #010101
+	font-size: 16px
+	font-weight: 300
+	margin-bottom 14px

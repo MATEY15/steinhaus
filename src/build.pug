@@ -1,0 +1,195 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--steinhaus-bulit
+			.container
+				.line-steinhaus--wrapper
+					.line-steinhaus--content
+						h3 Производство мечты
+						p Компания “ШтейнХаус” ищет партнеров во всех регионах России, для подключения производственных линий и увеличения охвата рынка.
+						p Производство имеет неоспоримые преимущества перед классическими производственными линиями. На изображении представлена стандартная производственная линия лего кирпича.
+						p Для вопросов по производственной линии:
+						.contact-contents
+							a(href="tel:+7(495)543-76-66").link-phones +7 (495) #[span 543-76-66]
+							a(href="mailto:lenta@steinhaus.ru").link-phones lenta@steinhaus.ru
+					.line-steinhaus--images
+						.line-steinhaus--bulit
+							.icon-bolun.is-active(style="top: 75%; left: 11%;")
+								span 1
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 60%; left: 23%;")
+								span 2
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 66%; left: 36%;")
+								span 3
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 57%; left: 46%;")
+								span 4
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 50%; left: 51%;")
+								span 5
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 36%; left: 49%;")
+								span 6
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 28%; left: 39%;")
+								span 7
+								.hide-content Ленточный транспортер
+							.icon-bolun(style="top: 60%; left: 56%;")
+								span 8
+								.hide-content Ленточный транспортер
+							.icon-bolun.left-position--bolun(style="top: 50%; left: 66%;")
+								span 9
+								.hide-content Ленточный транспортер
+							.icon-bolun.left-position--bolun(style="top: 42%; left: 79%;")
+								span 10
+								.hide-content Ленточный транспортер
+						img(src="img/line-steinhaus.jpg", alt="")
+
+				.scroll--home-section
+					a(href="#advantage").scroll-click
+						//- img(src="img/icon/mause-scroll.png", alt="").mause-icon
+						+iconSvg('36', '60', '0 0 36 60', 'icon-maus')
+						img(src="img/icon/arroe-down.svg", alt="").icon-down
+
+		section.section-advantages#advantage
+			.container
+				.heading-default.heading-center
+					h3 Преимущества нашего завода
+				.row
+					.col-md-4
+						ul.default-list--style
+							li Неограниченое расширение производства;
+							li Окупаемость вложений через 2-3 года;
+							li Надежное финское качество механизмов;
+							li Сертифицированное  производство кирпича;
+							li Продукт с высоким спросом;
+							li Лояльная дилерская сеть;
+						.height-45
+						a(href="#").button.button-red Смотреть презентацию
+					.col-md-8
+						.advantages-wrapper
+							.slider-advantages
+								.slide-advantages--items
+									img(src="img/advantages-slide1.jpg", alt="")
+								.slide-advantages--items
+									img(src="img/advantages-slide1.jpg", alt="")
+								.slide-advantages--items
+									img(src="img/advantages-slide1.jpg", alt="")
+							.advantages-navigate
+
+				.height-55
+
+				.number-section
+					.number-section--items
+						p(data-before="8000+").number-bold 8000+
+						p.description-text Кирпичей производим в день
+					.number-section--items
+						p(data-before="3").number-bold 3
+						p.description-text года опыта
+					.number-section--items
+						p(data-before="35+").number-bold 35+
+						p.description-text установленных линий
+					.number-section--items
+						p(data-before="100+").number-bold 100+
+						p.description-text партнеров
+
+		section.section--lego-brick#lego-brick
+			.heading-default.heading-center
+				h3 Какой кирпич можно производить?
+
+			.lego-brick--content
+				.container
+					.lego-brick--content-wrapper
+						.lego-brick--content-items.lego-brick--sertificat
+							.wrapper-sertificat
+								ul.list-sertificat
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия №1.pdf
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия №2.pdf
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия №3.pdf
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия ГОСТ.pdf
+						.lego-brick--content-items
+							.brick-color--item
+								p.name--brick-color Одноцветный кирпич
+								span.in-catalog В каталоге 23 позиции
+								.brick-color--img
+									img(src="img/brick-color2.png", alt="")
+								a(href="#").button.button-red Перейти в каталог
+						.lego-brick--content-items
+							.brick-color--item
+								p.name--brick-color Двухцветный кирпич
+								span.in-catalog В каталоге 23 позиции
+								.brick-color--img
+									img(src="img/brick-color2.png", alt="")
+								a(href="#").button.button-red Перейти в каталог
+
+		section.section-uniqueness
+			.container
+				.heading-default.heading-center
+					h3 В чем уникальность технологии?
+				.uniqueness-wrapper
+					.uniqueness-wrapper--table-img
+						.uniqueness-items
+							.uniqueness-items--img
+								img(src="img/brick-unik1.png", alt="")
+								.uniqueness-items--content
+									span.count 01
+									.text
+										h4 Уникальная “лего” форма
+										p Соединение шип-паз обеспечивает #[br] быструю укладку и точную фиксацию
+						.uniqueness-items
+							.uniqueness-items--img
+								img(src="img/brick-unik2.png", alt="")
+								.uniqueness-items--content
+									span.count 02
+									.text
+										h4 Высокий уровень прочности
+										p Уникальная технология изготовления придает кирпичу высокую прочность
+						.uniqueness-items.uniqueness-items--full
+							.uniqueness-items--img
+								img(src="img/brick-unik3.png", alt="")
+								.uniqueness-items--content
+									span.count 03
+									.text
+										h4 Разнообразные цветовые решения
+										p Более 50 цветовых оттенков кирпича, изготовим #[br] кирпич любого цвета на заказ.
+
+					.uniqueness-wrapper--info-text
+						p Text Custome
+						p Технология производство лего кирпича, позволяет создать кирпич с уникальными свойствами, средни них:
+						.height-30
+						ul
+							li Уникальное соединение шип-паз;
+							li Ускоренная кладка, до 3-х раз быстрее;
+							li Высокая прочность более ХХХХХХ;
+							li Морозостойкость. Кладка в любое время года;
+							li Водопоглощение 5-6%. Применяется в любом климате;
+							li Уникальяная кладка кирпича без швов.
+
+		section.section-video
+			.container
+				.heading-default.heading-center
+					h3 Видеообзор производственной линии
+
+				.video-wrapper
+					.video-responsive
+						iframe(width="560" height="315" src="https://www.youtube.com/embed/oCKPNRRNVbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+		include include/_blog-stein

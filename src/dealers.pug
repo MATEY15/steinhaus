@@ -1,0 +1,52 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--shipping-payment
+			.container
+				.heading-breadcrumbs.heading-breadcrumbs--offset
+					h1 Дилеры
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li Дилеры
+
+				.container-small
+					.default-content
+						p #[b Дилерска сеть ШтейнХаус] — это более 140 партнеров в Москве и Московской области. Используйте карту для поиска ближайшего дилера в вашем регионе.
+						
+					.number-section
+						.number-section--items
+							p(data-before="8000+").number-bold 8000+
+							p.description-text Кирпичей производим в день
+						.number-section--items
+							p(data-before="3").number-bold 3
+							p.description-text года опыта
+						.number-section--items
+							p(data-before="35+").number-bold 35+
+							p.description-text установленных линий
+
+		section.section--map
+			.container-small
+				.dealer-map--top
+					p.shop-map Магазины в г. #[a(href="#").sity Москва]
+					a(href="#").in-map #[+iconSvg('22', '30', '0 0 22 30', 'icon-location')] На карте
+				.dealer-map--main
+					.dealer-map
+						#dealer-map
+					.dealer-sidebar
+						.dealer-list-wiev
+							a(href="#").close-prewiev Назад
+							ul#dealer-list-wiev--main
+
+
+		include include/_lego-brick
+
+		include include/_blog-stein

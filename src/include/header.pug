@@ -1,0 +1,50 @@
+header.header
+	.container.flex-container
+		.logo
+			a.logo-link(href="/")
+				img(src="img/logo.png", alt="")
+
+			.drop-phone
+				a(href="tel:+7(495)543-76-66").info-icon.link-phones.phone-dropdown +7 (495) #[span 543-76-66]
+				.list-phones
+					ul
+						li
+							p.name-category Отдел продаж
+							a(href="tel:+7(495)543-76-66").link-phones +7 (495) #[span 543-76-66]
+						li
+							p.name-category Производство
+							a(href="tel:+7(495)543-76-66").link-phones +7 (495) #[span 543-76-66]
+						li
+							p.name-category Часы работы
+							span с 9:00 до 19:00
+
+		nav.top-menu--wrapper
+			a.closed-burger
+				span
+				span
+			ul.top-menu
+				li.active
+					a(href="#") О нас
+					.sub-menu
+						ul.list--sub-menu
+							li
+								a(href="#") О компании
+							li
+								a(href="#") Производство
+							li
+								a(href="#") Доставка и оплата
+							li
+								a(href="#") Блог компании
+				li
+					a(href="#") Каталог
+				li
+					a(href="#") Производство
+				li
+					a(href="#") Новости
+				li
+					a(href="#") Контакты
+
+		a(href="#").burger-menu
+			span
+			span
+			span

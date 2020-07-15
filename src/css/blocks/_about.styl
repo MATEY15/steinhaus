@@ -1,0 +1,227 @@
+.company-about--sertificat
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	border-top 1px solid #f5f5f5
+	margin-bottom 50px
+	
+	.sertificat-items
+		width 50%
+		border-bottom 1px solid #f5f5f5
+		padding 15px 0 12px
+
+.section--company-about
+	.company-about--description
+		display flex
+		justify-content space-between
+	.default-content
+		max-width 640px
+		padding-top 35px
+		h3
+			margin-bottom 40px
+
+.section--slider-about
+	padding-top 35px
+	padding-bottom 50px
+	
+	h3
+		font-size 34px
+		margin-bottom 35px
+
+.slider-brick--full
+	.items
+		img
+			max-width 100%
+			margin 0 auto
+
+.slider-brick--full-navigate
+	max-width 210px
+	margin 0 auto
+	display flex
+	justify-content space-between
+	.slick-arrow
+		cursor pointer
+		&:hover
+			svg
+				fill: #f8484f
+	.built-objects--next
+		svg
+			transform: rotateY(180deg)
+	svg
+		fill: #ccc
+		transition: all .2s ease-out
+
+
+// Dealers
+
+.dealer-map--top
+	display flex
+	justify-content space-between
+	align-items center
+	min-height: 45px
+	border-radius: 3px 3px 0 0
+	background-color: #fbfbfb
+	color: #000000
+	font-size: 14px
+	font-weight: 300
+	padding 10px 20px
+	
+	.shop-map
+		.sity
+			font-size: 14px
+			font-weight: 400
+			color #e63d25
+	
+	.in-map
+		font-size: 14px
+		font-weight: 400
+		color #e63d25
+		.icon-location
+			fill #e63d25
+			width 11px
+			height 12px
+
+.dealer-map--main
+	display flex
+	flex-direction row
+.dealer-map
+	width 100%
+	max-width 840px
+.dealer-sidebar
+	position relative
+	width 390px
+	min-width 390px
+	background: #fff
+	min-height 520px
+	
+	.hide-in
+		// display none
+
+.dealer-list,
+#dealer-list-wiev--main
+	max-height 520px
+	overflow auto
+	li
+		overflow hidden
+		&:not(:last-child)
+			border-bottom 1px solid #eeeeee
+	.links-map
+		position relative
+		display block
+		color: #e63d25
+		font-size: 13px
+		padding 20px
+		padding-left 60px
+		&.is-active
+			.icon-red
+				background: #e63d25
+				&:before
+					opacity 1
+					visibility visible
+					width 12px
+					height 12px
+		.icon-red
+			position absolute
+			left 18px
+			top 18px
+			display block
+			width: 22px
+			height: 22px
+			background: #eeeeee
+			brr(50%)
+			trn(.1s)
+			&:before
+				position absolute
+				left 50%
+				top 50%
+				content ''
+				width: 20px
+				height: 20px
+				brr(50%)
+				background: #ffffff
+				tt(-50%, -50%)
+				trn(.1s)
+	.address-map
+		display block
+		color: #000000
+		font-size: 14px
+		font-weight: 300
+		margin-top 12px
+		margin-bottom 32px
+	.clock-map
+		display flex
+		align-items center
+		color: #9c9c9c
+		font-size: 14px
+		font-weight: 400
+		img
+			margin-right 10px
+
+.wrapper-map
+	position relative
+	display none
+	padding: 20px
+	padding-left: 60px
+	border-top 1px solid #eee
+	// &:before
+	// 	position absolute
+	// 	left -60px
+	// 	width 100%
+	// 	min-width 390px
+	// 	height 1px
+	// 	content ''
+	// 	background: #eee
+	&.is-active
+		display block
+	
+	.stops
+		// margin-bottom 30px
+	.gallery-wrapper
+		margin-bottom 0
+	
+	span
+		display block
+		color: #000000
+		font-size: 16px
+		font-weight: 300
+		margin-bottom 30px
+		b
+			font-weight 500
+
+.gallery-wrapper
+	display flex
+	flex-direction row
+	img
+		max-width 80px
+		brr(10px)
+		&:not(:last-child)
+			margin-right 20px
+
+
+.dealer-list-wiev
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	background: #fff
+	z-index 100
+	opacity 0
+	visibility hidden
+	trn(.2s)
+	&.is-show
+		opacity 1
+		visibility visible
+
+
+#dealer-list-wiev--main
+	.wrapper-map
+		display block
+
+
+.close-prewiev
+	display block
+	color: #e63d25
+	font-size: 14px
+	font-weight: 400
+	padding 16px 20px 0

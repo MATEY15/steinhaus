@@ -1,0 +1,259 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--steinhaus-bulit
+			.container
+				.heading-back
+					a(href="catalog-brick.html").link-back #[+iconSvg('32', '23', '0 0 32 23', 'icon-back')] Назад в каталог
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Каталог 
+						li Коричнево-белый коралл
+				
+				.product-information
+					.row
+						.col-md-7
+							.slider-product--images
+								.slider-product--big
+									.items-slide
+										img(src="img/brick-product.png", alt="")
+									.items-slide
+										img(src="img/brick-product.png", alt="")
+									.items-slide
+										img(src="img/brick-product.png", alt="")
+									.items-slide
+										img(src="img/brick-product.png", alt="")
+
+								.slider-product--prewiev
+									.items-slide
+										img(src="img/brick-small1.png", alt="")
+									.items-slide
+										img(src="img/brick-small2.png", alt="")
+									.items-slide
+										img(src="img/brick-small3.png", alt="")
+									.items-slide
+										img(src="img/brick-small4.png", alt="")
+
+						.col-md-5
+							.product-description
+								.product-description--head
+									h1 Красно-белый коралл
+									span.category Одноцветный кирпич
+								.product-description--price
+									p.price 47.47 руб. за шт
+									.add-pay
+										button.button.button-red Оформить заказ
+										a(href="#popup-call").popup Заказать образец кирпича
+
+								.product-description--text
+									p Гиперпрессованный кирпич является прекрасным строительным материалом и может использоваться не только для внешней, но и внутренней отделки зданий.
+									p При необходимости можно придать большую яркость и защитить кирпич Steinhaus с помощью модификатора цвета и пропитки (эффект «мокрый камень») со свойством гидрофобизации.
+
+				.product-parametr
+					ul.product-info
+						li
+							+iconSvg('7', '8', '0 0 7 8', 'icon-all')
+							span Вес:
+							| 3 кг
+						li
+							+iconSvg('7', '7', '0 0 7 7', 'icon-size')
+							span Размер:
+							| 240х120х65 мм
+						li
+							+iconSvg('7', '7', '0 0 7 7', 'icon-marka')
+							span Марка:
+							| 2М200
+						li
+							+iconSvg('7', '7', '0 0 7 7', 'icon-struktur')
+							span Фактура:
+							| Гладкий
+						li
+							+iconSvg('7', '7', '0 0 7 7', 'icon-type')
+							span Вид:
+							| Рядовой/Облицовочный
+						li
+							+iconSvg('11', '6', '0 0 11 6', 'icon-palete')
+							span На паллете:
+							| 450 шт
+
+				.product-sertificat
+					.row
+						.col-md-4
+							.product-sertificat--item
+								a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №1.pdf
+						.col-md-4
+							.product-sertificat--item
+								a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №2.pdf
+						.col-md-4
+							.product-sertificat--item
+								a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №3.pdf
+
+				.make-order
+					form.make-order--form
+						.row
+							.col-md-4
+								.make-order--text
+									p #[img(src="img/icon/icon--list-order.png", alt="")] Оформите заказ #[br]на кирпич
+							.col-md-8
+								.name-phone--main
+									.name-phone--wrapper
+										.name-phone
+											input(type="text" placeholder="Имя")
+											input(type="text" placeholder="Телефон")
+										.count-brick
+											.count-brick--calculate
+												label(for="count-brick") Количество
+												.qty-input
+													i.less -
+													input(type="text" value="1" id="count-brick")
+													i.more +
+												span.close-x x
+												p.summ-price #[span#summ-price 47.47] руб
+											.count-brick--result
+												p.result-summ = #[span#result-summ--number 21 361 руб.]
+								
+									.submit--make-order
+										button.button.button-red--full Заказать
+										p.politic-text Нажимая кнопку “Заказать” я соглашаюсь #[br]с условиями #[a(href="#") политики конфиденциальности]
+				
+				include include/module/_thnx
+				
+
+				.calculate-brick--wrapper
+					.calculate-brick--head
+						h3 #[img(src="img/icon/calculator.png", alt="")] Посчитайте количество необходимого кирпича
+					.calculate-brick--form
+						.calculate-brick--form-size
+							h4 01. Размер строения
+							.calculate-brick--item-block
+								.calculate-brick--item
+									label.label-icon
+										img(src="img/icon/dom-perimeter.svg", width="40px", alt="")
+									input(type="text" placeholder="Периметр стен (м)")#perimetr-all
+									span.error необходимо заполнить
+								.calculate-brick--item
+									label.label-icon
+										img(src="img/icon/dom-vysota.svg", width="45px", alt="")
+									input(type="text" placeholder="Высота стен (м)")#height-home
+									span.error необходимо заполнить
+								.calculate-brick--item
+									label.label-icon
+										img(src="img/icon/dveri-perimetr.svg", width="40px", alt="")
+									input(type="text" placeholder="Длина дверей и окон (м)")#width-window
+									span.error необходимо заполнить
+								.calculate-brick--item
+									label.label-icon
+										img(src="img/icon/dveri-visota.svg", width="50px", alt="")
+									input(type="text" placeholder="Высота дверей и окон (м)")#height-window
+									span.error необходимо заполнить
+
+						.calculate-brick--form-type
+							h4 02. Тип кладки
+							.radio-brick--block
+								.radio-brick--item
+									label.radio
+										input(type="radio" name="radio" data-size="0.5" checked="checked")
+										.radio__text
+											.status-icon
+											img(src="img/icon/brick-type1.png", alt="")
+											p Кладка ½ кирпича
+								.radio-brick--item
+									label.radio
+										input(type="radio" name="radio" data-size="1")
+										.radio__text
+											.status-icon
+											img(src="img/icon/brick-type2.png", alt="")
+											p Кладка 1 кирпич
+								.radio-brick--item
+									label.radio
+										input(type="radio" name="radio" data-size="1.5")
+										.radio__text
+											.status-icon
+											img(src="img/icon/brick-type3.png", alt="")
+											p Кладка 1 ½ кирпича
+								.radio-brick--item
+									label.radio
+										input(type="radio" name="radio" data-size="2")
+										.radio__text
+											.status-icon
+											img(src="img/icon/brick-type4.png", alt="")
+											p Кладка 2 кирпича
+								.radio-brick--item
+									label.radio
+										input(type="radio" name="radio" data-size="2.5")
+										.radio__text
+											.status-icon
+											img(src="img/icon/brick-type5.png", alt="")
+											p Кладка 2 ½ кирпича
+
+					.resurt-calculate--wrapper
+						.resurt-calculate--button
+							button.button.button-red--full#result-go Рассчитать количество
+							button.button.button-gray#result-reset Сбросить
+						.resurt-calculate--itog
+							p Кирпича необходимо: #[span#result-brick Введите параметры в поля]
+
+
+
+		section.section--new-catalog
+			.container
+				.heading-default
+					h3 Другой кирпич
+				.new-catalog--wrapper
+					.new-catalog--slider
+						.new-catalog--items
+							+productCatalog("img/bric-product1.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product2.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product3.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product1.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product2.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product3.png")
+
+					.new-catalog--navigate
+
+		section.section--built-product
+			.container
+				.heading-default
+					h3 Проекты из этого кирпича
+				.built-objects--wrapper
+					.built-objects--slider-big
+						.built-slider--big
+							.built-slider--big-item
+								img(src="img/built-slider--big.jpg", alt="")
+							.built-slider--big-item
+								img(src="img/built-slider--small.jpg", alt="")
+							.built-slider--big-item
+								img(src="img/built-slider--big.jpg", alt="")
+							.built-slider--big-item
+								img(src="img/built-slider--small.jpg", alt="")
+					.built-objects--slider-small
+						.built-object--head
+							h3.big-red STEINHAUS
+							h4 Построенные объекты
+							.built-objects--navigate
+						.built-slider--small
+							.built-slider--small-item
+								img(src="img/built-slider--small.jpg", alt="")
+							.built-slider--small-item
+								img(src="img/built-slider--big.jpg", alt="")
+							.built-slider--small-item
+								img(src="img/built-slider--small.jpg", alt="")
+							.built-slider--small-item
+								img(src="img/built-slider--big.jpg", alt="")
+
+		include include/_blog-stein

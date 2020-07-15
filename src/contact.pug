@@ -1,0 +1,61 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--shipping-payment
+			.container
+				.heading-breadcrumbs.heading-breadcrumbs--offset
+					h1 Контакты
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li Контакты
+		
+				
+				.container-offset
+					.row
+						.col-md-4
+							ul.list-address
+								li
+									span.list-address--name
+										span Адрес производства
+										a(href="#").icon--to-map На карте
+									span.list-address--main г. Кимры, ул. Дмитрия  Баслыка, 7
+								li
+									span.list-address--name
+										span Телефон
+									a(href="tel:+7(495)543-76-66").link-phones +7 (495) #[span 543-76-66]
+								li
+									span.list-address--name
+										span Email
+									a(href="mailto:office@steinhaus.ru").link-phones office@steinhaus.ru
+						.col-md-4
+							ul.list-address
+								li
+									span.list-address--name
+										span Адрес производства
+										a(href="#").icon--to-map На карте
+									span.list-address--main г. Кимры, ул. Орджоникидзе д 85, офис 201
+								li
+									span.list-address--name
+										span Телефон производства
+									a(href="tel:+7(495)543-76-66").link-phones +7 (495) #[span 543-76-66]
+								li
+									a(href="#").sertificat-link
+										img(src="img/icon/icon-sertificat.png", alt="")
+										| Реквизиты.pdf
+
+					.height-55
+
+					iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ed15c52bc9f4f7a45571d4b8a67c6c2164ac97db900c1dcd63016d4df7e3e72&amp;source=constructor" width="100%" height="400" frameborder="0")
+
+		include include/_lego-brick
+
+		include include/_blog-stein

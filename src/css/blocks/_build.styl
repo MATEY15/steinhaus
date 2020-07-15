@@ -1,0 +1,232 @@
+.section-video
+	padding-top 50px
+	padding-bottom 50px
+	
+	.heading-default
+		margin-bottom 48px
+
+.video-wrapper
+	max-width 928px
+	width 100%
+	margin 0 auto
+
+
+.video-responsive
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 30px
+	height: 0
+	overflow: hidden
+	iframe,
+	object,
+	embed
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+
+.contact-contents
+	display flex
+	justify-content space-between
+	max-width 450px
+	a
+		&:not(:last-child)
+			margin-right 40px
+
+.section--steinhaus-bulit
+	padding-top 20px
+	.line-steinhaus--wrapper
+		align-items center
+
+.line-steinhaus--images
+	position relative
+.line-steinhaus--bulit
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+
+.icon-bolun
+	position absolute
+	width 26px
+	height 26px
+	cursor pointer
+	span
+		position relative
+		display flex
+		justify-content center
+		align-items center
+		width 26px
+		height 26px
+		border: 1px solid #dfdfdf
+		brr(50%)
+		background: #fff
+		color: #5e5e5e
+		font-size: 14px
+		font-weight: 500
+		z-index 10
+		trn(.2s)
+		user-select none
+	
+	&.left-position--bolun
+		.hide-content
+			left auto
+			right calc(100% + 10px)
+	
+	&:before
+		transform: scale(1)
+		animation: pulse 2s infinite linear
+	&:after
+		animation: pulse 2s 2s infinite linear
+	
+	&.is-active
+		.hide-content
+			opacity 1
+			visibility visible
+	
+	&.is-active,
+	&:hover
+		span
+			background: #f60913
+			color #fff
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 100%
+			height: 100%
+			margin-left -14px
+			margin-top -14px
+			border: 1px solid rgba(246, 15, 25, 0.4)
+			box-shadow: 0 0 25px 1px rgba(246, 15, 25, 0.2) inset
+			border-radius: 50%
+			opacity: 0
+
+	
+	.hide-content
+		position absolute
+		top 5px
+		left calc(100% + 10px)
+		width: 235px
+		min-height: 44px
+		box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2)
+		border-radius: 3px
+		border: 1px solid #e9e9e9
+		background-color: #ffffff
+		color: #010101
+		font-size: 14px
+		font-weight: 300
+		line-height: 25px
+		padding 8px 20px
+		opacity 0
+		visibility hidden
+		trn(.2s)
+		z-index 100
+
+
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.6);
+		transform: scale(0.6);
+		opacity: 0;
+	}
+	33% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1.4);
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.6);
+		transform: scale(0.6);
+		opacity: 0;
+	}
+	33% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1.4);
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
+
+.slider-advantages
+	.slick-slide img
+		max-height 460px
+		max-width 100%
+
+.section-advantages
+	padding-bottom 45px
+	.heading-default
+		margin-bottom 55px
+
+// List custom
+
+ul.default-list--style
+	li
+		position relative
+		color: #010101
+		font-size: 14px
+		font-weight: 800
+		padding-left 20px
+		&:before
+			position absolute
+			content ''
+			left 0
+			top 4px
+			width: 8px
+			height: 8px
+			background-color: #f6121c
+			brr(50%)
+		&:not(:last-child)
+			margin-bottom 18px
+
+.advantages-wrapper
+	position relative
+
+.advantages-navigate
+	position absolute
+	top 0
+	height 100%
+	width 100%
+	.slick-arrow
+		position absolute
+		top 0
+		display flex !important
+		justify-content center
+		align-items center
+		height 100%
+		width 125px
+		min-height 100%
+		background: rgba(0, 0, 0, 0.1)
+		cursor pointer
+		&.slick-disabled
+			display none !important
+		
+		svg
+			fill #fff
+			width 72px
+			height 33px
+	
+	.new-catalog--prev
+		left 0
+	.new-catalog--next
+		right 0
+		svg
+			transform rotateY(180deg)

@@ -1,0 +1,74 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--shipping-payment
+			.container
+				.heading-breadcrumbs.heading-breadcrumbs--offset
+					h1 О нас
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li О нас
+
+				.container-small
+					.default-content
+						p #[b Компания STEINHAUS] — лидер в производстве замкового гиперпрессованного кирпича в России. Этого результата мы достигли всего за #[b(style="color: #f60610;") 3] года.
+						p Осуществляется строгий контроль качества производимой продукции, который достигается за счет использования высококачественных материалов, работы специалистов высокого уровня и использования самого современного оборудования.
+						
+					.number-section
+						.number-section--items
+							p(data-before="8000+").number-bold 8000+
+							p.description-text Кирпичей производим в день
+						.number-section--items
+							p(data-before="3").number-bold 3
+							p.description-text года опыта
+						.number-section--items
+							p(data-before="35+").number-bold 35+
+							p.description-text установленных линий
+
+		section.section--slider-about
+			.container-small
+				h3 Производимый кирпич:
+
+			.slider-brick--full
+				.items
+					img(src="img/img-brick--full.jpg", alt="")
+				.items
+					img(src="img/img-brick--full.jpg", alt="")
+				.items
+					img(src="img/img-brick--full.jpg", alt="")
+
+			.slider-brick--full-navigate
+
+		section.section--company-about
+			.container-small
+				.company-about--sertificat
+					.sertificat-items
+						a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №1.pdf
+					.sertificat-items
+						a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №1.pdf
+					.sertificat-items
+						a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №1.pdf
+					.sertificat-items
+						a(href="#").sertificat-link #[img(src="img/icon/icon-sertificat.png", alt="")] Сертификат соответствия №1.pdf
+
+				.company-about--description
+					.default-content
+						h3 Компания STEINHAUS
+						p #[b Гиперпрессованный кирпич Штейнхаус] — уникальный продукт не имеющий аналогов в России. Всё то, что сегодня предлагает рынок — гаражные самоделки без сертификации и экспертиз. Мы даем качество и стабильность нашим покупателям.
+						p Взаимовыгодные партнерские отношения - очень важны для нашей компани. Благодаря нашим партнёрам мы развиваем уровень доступности нашей продукции по всей России и готовы выгодно сотрудничать с различными представителями отраслей.
+						p #[i Генеральный директор компании ] #[b Дмитрий Осипов]
+					.company-about--images
+						img(src="img/ceo.png", alt="")
+
+		include include/_lego-brick
+
+		include include/_blog-stein

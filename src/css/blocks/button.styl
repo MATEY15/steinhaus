@@ -1,0 +1,54 @@
+.button
+	position relative
+	display inline-block
+	min-width 240px
+	height 51px
+	text-align center
+	font-size: 16px
+	font-weight: 300
+	color: cBlack
+	text-decoration none
+	padding 15px 43px
+	cursor pointer
+	transition all .25s ease-out
+	
+	&:hover
+		background: cRed
+		color: #fff
+	
+	&.button-red
+		border-radius 4px
+		border 1px solid cRed
+		&:hover
+			background: cRed
+			color: #fff
+			box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2)
+	
+	&.button-red--full
+		border-radius 3px
+		border 1px solid #e20613
+		background: #e20613
+		color: #fff
+		&:hover
+			border: 1px solid #f60f19
+			background-color: #bf0410
+	
+	&.button-gray
+		border-radius 3px
+		border 1px solid #d3d3d3
+		background: #d3d3d3
+		color: #000
+		&:hover
+			background: #B0B4B7
+			border 1px solid #B0B4B7
+		
+	
+	.arrow-right
+		position absolute
+		top 50%
+		right 15px
+		transform translate(0, -50%)
+		
+	@media screen and (max-width: 600px)
+		// font-size 12px
+		

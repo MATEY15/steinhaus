@@ -1,0 +1,436 @@
+@import ("../../libs/template/reset.css")
+@import ("../../libs/template/lib")
+@import ("../../libs/template/media")
+
+@import ("libs/*.css")
+@import ("fonts")
+@import ("blocks/**/**")
+
+*
+	box-sizing border-box
+
+html
+	height 100%
+
+body
+	position relative
+	overflow-x: hidden
+	min-width 320px
+	background: #fff
+	font-family: 'Montserrat', sans-serif
+	min-height 100%
+	&.overflow
+		overflow hidden
+
+#overlayer
+	width 100%
+	height 100%
+	position fixed
+	top 0
+	left 0
+	z-index 11
+	background cBlack
+
+.align-right
+	float right
+.align-left
+	float left
+
+.heading-back
+	display flex
+	justify-content space-between
+	align-items center
+
+.link-back
+	display flex
+	align-items center
+	color: #f60510
+	font-size: 14px
+	font-weight: 300
+	line-height: 26.02px
+	text-decoration none
+	&:hover
+		text-decoration underline
+	svg
+		width 20px
+		height 10px
+		fill #f60510
+		margin-right 10px
+
+b
+	font-weight 800
+
+h1, h2, h3, h4, h5, h6
+	font-weight 800
+
+h1
+	font-size 40px
+h2
+	font-size 28px
+h3
+	font-size 26px
+h4
+	font-size 22px
+h5
+	font-size 18px
+h6
+	font-size 16px
+
+
+.default-content
+	p
+		color #000
+		font-size 16px
+		line-height: 25px
+		margin-bottom 24px
+		@media screen and (max-width: 600px)
+			font-size 14px
+	
+	b
+		font-size 16px
+		font-weight 700
+		@media screen and (max-width: 600px)
+			font-size 14px
+	
+	span
+		font-size 14px
+		font-weight 300
+	
+	ul
+		li
+			position relative
+			font-size 14px
+			font-weight 300
+			padding-left 18px
+			&:not(:last-child)
+				margin-bottom 11px
+			&:before
+				position absolute
+				top 5px
+				left 0
+				content ''
+				width 5px
+				height 5px
+				background: #F6121C
+				brr(50%)
+			
+	
+	.quotes
+		position relative
+		display flex
+		align-items center
+		min-height: 77px
+		border-radius: 3px
+		background-color: #fbfbfb
+		padding 10px 35px
+		color: #000000
+		font-size: 14px
+		font-weight: 600
+		line-height: 25px
+		&:before
+			position absolute
+			top 0
+			left 0
+			content ''
+			width 4px
+			height 100%
+			background: #f6121c
+
+.container
+	box-sizing border-box
+	max-width 1430px
+	width 100%
+	padding-left 10px
+	padding-right 10px
+	margin 0 auto
+	@media screen and (max-width: 640px)
+		margin 0 auto
+
+.container-offset
+	padding-left 170px
+
+
+.container-small
+	max-width 1080px
+	padding 0 10px
+	margin 0 auto
+
+.row
+	display flex
+	flex-direction row
+	margin 0 -15px
+
+[class*="col-"]
+	padding 0 15px
+
+.col-md-1 {width:8.333333333333334%}
+.col-md-2 {width:16.666666666666668%}
+.col-md-3 {width:25%}
+.col-md-4 {width:33.333333333333336%}
+.col-md-5 {width:41.66666666666667%}
+.col-md-6 {width:50%}
+.col-md-7 {width:58.333333333333336%}
+.col-md-8 {width:66.66666666666667%}
+.col-md-9 {width:75%}
+.col-md-10 {width:83.33333333333334%}
+.col-md-11 {width:91.66666666666667%}
+.col-md-12 {width:100%}
+
+.wrapper-betwwen
+	justify-content space-between
+
+.height-30
+	height 30px
+.height-40
+	height 40px
+.height-45
+	height 45px
+.height-55
+	height 55px
+
+.wiev-chanel
+	position relative
+	display flex
+	align-items center
+	min-height: 51px
+	border-radius: 3px
+	background-color: #fbfbfb
+	padding 10px
+	padding-left 30px
+	
+	&:before
+		position absolute
+		top 0
+		left 0
+		content ''
+		width 4px
+		height 100%
+		background: #f6121c
+	p
+		margin 0
+		font-weight 600
+		font-size 14px
+	a
+		color #f6121c
+		text-decoration none
+		font-size 14px
+		font-weight 600
+		&:hover
+			text-decoration underline
+
+// Icons
+
+.info-icon:after
+	position relative
+	width 13px
+	height 13px
+	background-image: url(../img/icon/info-icon.png)
+	display inline-block
+	content ''
+
+.icon--to-map:after
+	position relative
+	width 8px
+	height 8px
+	background-image: url(../img/icon/arrow-address.png)
+	display inline-block
+	content ''
+
+
+.sertificat-link
+	display flex
+	align-items center
+	color: #010101
+	font-size: 14px
+	font-weight: 600
+	text-decoration none
+	trn(.2s)
+	&:hover
+		text-decoration underline
+	img
+		margin-right 25px
+
+.link-phones
+	color: #232323
+	font-weight: 400
+	line-height: 26px
+	letter-spacing: 0.9px
+	text-decoration none
+	font-size 16px
+	span
+		color: #f50a14 !important
+
+
+.heading-breadcrumbs
+	position relative
+	display flex
+	flex-direction row
+	justify-content space-between
+	margin-bottom 48px
+	margin-top 60px
+	&:before
+		position absolute
+		top 50%
+		left 0
+		width 100%
+		content ''
+		display block
+		height 1px
+		background: #ff0000
+		margin-top -1px
+	h1
+		position relative
+		top -3px
+		font-size 40px
+		padding-right 45px
+		background: #fff
+		max-width 55%
+		.date
+			position absolute
+			left 0
+			top calc(100% + 10px)
+			color: #bfbfbf
+			font-size: 14px
+			font-weight: 300
+	&.heading-breadcrumbs--offset
+		h1
+			padding-left 30px
+			padding-right 60px
+			margin-left 145px
+
+.breadcrumbs-list
+	position relative
+	padding-left 30px
+	display flex
+	align-items center
+	background: #fff
+	li
+		display flex
+		align-items center
+		span
+			max-width: 80px
+			overflow: hidden
+			display: inline-block
+			white-space: nowrap
+			text-overflow: ellipsis
+		a
+			&:after
+				display inline-block
+				width: 8px
+				height: 8px
+				content ''
+				background-color: #f6121c
+				brr(50%)
+				margin 0 19px
+		&:hover a
+			color: #666666
+	li, a, span
+		color: #666666
+		font-size: 14px
+		font-weight: 300
+		trn(.2s)
+	a
+		display flex
+		align-items center
+		color:  #cecece
+
+
+input,
+textarea
+	height: 40px
+	min-width 235px
+	border-radius: 3px
+	border: 1px solid #e3e3e3
+	background-color: #ffffff
+	color: #8c8c8c
+	font-size: 14px
+	font-weight: 300
+	padding 10px 20px
+	
+	&::-webkit-input-placeholder
+		color: #8c8c8c
+	&::-moz-placeholder
+		color: #8c8c8c
+	&:-ms-input-placeholder
+		color: #8c8c8c
+	&:-moz-placeholder
+		color: #8c8c8c
+
+// Popup
+
+.popup-call
+	width: 100%
+	max-width: 443px
+	box-shadow: 0 0 28px 2px rgba(0, 0, 0, 0.05)
+	border-radius: 3px
+	background-color: #ffffff
+	margin: 20px auto
+	padding 50px 40px 20px
+	
+	p
+		color: #010101
+		font-size: 14px
+		font-weight: 300
+		margin-bottom 15px
+
+.popup-head
+	margin-bottom 35px
+	h3
+		color: #010101
+		font-size: 26px
+		font-weight: 700
+		margin-bottom 11px
+	p
+		font-size: 14px
+		font-weight: 300
+		color: #010101
+		margin-bottom 0
+		span
+			color: #f6121c
+	
+.call-return
+	& input,
+	& textarea
+		width 100%
+		min-height: 40px
+		border-radius: 3px
+		border: 1px solid #e3e3e3
+		background-color: #ffffff
+		margin-bottom 17px
+	
+	.button.button-red--full
+		width 100%
+		margin-top 20px
+	
+	.politic-text
+		font-size: 12px
+		font-weight: 300
+		color: #010101
+		margin-bottom 0
+		margin-top 8px
+		a
+			color: #e20613
+
+
+
+
+// Del
+
+
+.section-links
+	display flex
+	align-items center
+	padding 50px 0
+.list-links
+	li
+		margin-bottom 20px
+		a
+			font-size 24px
+			font-weight 500
+			color #000
+
+#map-contact
+	height 400px
+
+#dealer-map
+	height 520px

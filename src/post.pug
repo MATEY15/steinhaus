@@ -1,0 +1,43 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--news-prewiev
+			.container
+				.heading-breadcrumbs
+					h1 Строительство дома в г. Дубна
+						span.date 29 июня 2020
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Новости
+						li
+							span Строительство дома в г. Дубна
+
+				.news-post--prewiev
+					.row.wrapper-betwwen
+						.col-md-7
+							.post-prewiev
+								.post-prewiev--img
+									img(src="img/post-big.jpg", alt="")
+								p Наша компания продолжает строительство двух этажного дома из гиперпрессованного кирпича ТМ Steinhaus. Это отличный шанс увидеть как работать с нашим кирпичом, что такое термодом, какой толщины необходимо класть стены, как заливать и армировать каналы, если у вас возникнет желание приехать к нам — милости просим.
+								p Тел. 8(495) 543-76-66
+								.wiev-chanel
+									p Следите за нашим #[a(href="#") youtube каналом]
+
+						.col-md-3
+							a(href="#").more-posts Еще статьи
+							+newsItem("img/news2.jpg")
+							+newsItem("img/news3.jpg")
+		
+		include include/_lego-brick
+
+		include include/_blog-stein

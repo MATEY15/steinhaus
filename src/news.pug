@@ -1,0 +1,56 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--news-prewiev
+			.container
+				.heading-breadcrumbs
+					h1 Новости
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li Новости
+
+				.news-prewiev
+					.row
+						.col-md-3
+							+newsItem("img/news1.jpg")
+						.col-md-3
+							+newsItem("img/news2.jpg")
+						.col-md-3
+							+newsItem("img/news3.jpg")
+						.col-md-3
+							+newsItem("img/news4.jpg")
+						.col-md-3
+							+newsItem("img/news1.jpg")
+						.col-md-3
+							+newsItem("img/news2.jpg")
+						.col-md-3
+							+newsItem("img/news3.jpg")
+						.col-md-3
+							+newsItem("img/news4.jpg")
+
+				nav.pagination
+					.nav-links
+						a(href="#").pagination-prev.pagin-hide
+							img(src="img/pagination-arrow.png", alt="")
+						a(href="#").active 1
+						a(href="#") 2
+						a(href="#").pagination-next
+							img(src="img/pagination-arrow.png", alt="")
+		
+		include include/_lego-brick
+
+		include include/_blog-stein
+
+		//- .container
+		//- 	h1 12345
+
+		//- 	+iconSvg('34', '32', '0 0 34 32', 'icon-star')

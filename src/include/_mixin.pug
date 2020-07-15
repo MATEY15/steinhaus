@@ -1,0 +1,69 @@
+mixin menuList(links)
+	ul
+		for i in links
+			li
+				a(href=i.link)=i.name
+
+mixin headingH2(name, desc)
+	.heading-content
+		h2= name
+		p= desc
+
+mixin button(name)
+	button.button-more
+		=name
+		svg(width="41" height="8" viewBox="0 0 41 8").icon-more
+			use(xlink:href="img/icon/sprite.svg#icon-more")
+
+mixin iconSvg(w, h, wp, id)
+	svg(width=w height=h viewBox=wp class=id)
+		use(xlink:href="img/icon/sprite.svg#"+id)
+
+
+mixin topSlider()
+	.slider-home--items
+		.slider-home--items-text
+			.hide-blocks.ofsset-title
+				h3 Производитель уникального #[br] лего-кирпича в России
+			.hide-blocks
+				a(href="#").button.button-red Смотреть каталог
+		.slider-home--items-img
+			img(src="img/brick-slider.png", alt="")
+
+
+mixin productCatalog(images)
+	.product-catalog
+		ul.product-info
+			li
+				//- img(src="img/icon/icon-size.png", alt="")
+				+iconSvg('7', '8', '0 0 7 8', 'icon-all')
+				| 240х120х65
+			li
+				//- img(src="img/icon/icon-m200.png", alt="")
+				+iconSvg('7', '7', '0 0 7 7', 'icon-marka')
+				| M200
+			li
+				//- img(src="img/icon/icon-brick-count.png", alt="")
+				+iconSvg('11', '6', '0 0 11 6', 'icon-palete')
+				| 450 шт
+		a(href="#").product-images
+			img(src=images , alt="")
+		.product-contents
+			a(href="#").category Одноцветный кирпич
+			a(href="#").name Коричнево бежевый Агат
+			.product-price
+				p.price 47.47 руб. / шт
+				a(href="brick-product.html").button.button-red.icon-arrow Подробнее
+					+iconSvg('32', '23', '0 0 32 23', 'icon-back')
+					//- img(src="img/icon/arrow-red--small.png", alt="").arrow-right
+
+
+mixin newsItem(images)
+	.news-prewiev--item
+		a(href="#").news-images
+			img(src=images, alt="")
+		h4
+			a(href="#") Открытие представительства в Дмитрове
+		.default--date-more
+			span.date 25 июня 2020
+			a(href="#").more Читать

@@ -1,0 +1,61 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--catalog-brick
+			.container
+				.heading-breadcrumbs.heading-breadcrumbs--offset
+					h1 Каталог кирпича
+					ul.breadcrumbs-list
+						li
+							a(href="#") Главная
+						li Новости
+		
+				.catalog-brick
+					.container-offset
+						.row.big-catalog
+							.col-md-6
+								.product-color
+									img(src="img/brick-color2.png", alt="")
+									.product-color--top
+										p.name Одноцветный кирпич
+										span.in-catalog В каталоге 23 позиции
+									a(href="#").button.button-red Перейти в категорию
+							.col-md-6
+								.product-color
+									img(src="img/brick-color2.png", alt="")
+									.product-color--top
+										p.name Двухцветный кирпич
+										span.in-catalog В каталоге 23 позиции
+									a(href="#").button.button-red Перейти в категорию
+
+						.row
+							.col-md-4
+								+productCatalog("img/bric-product1.png")
+							.col-md-4
+								+productCatalog("img/bric-product2.png")
+							.col-md-4
+								+productCatalog("img/bric-product3.png")
+							.col-md-4
+								+productCatalog("img/bric-product1.png")
+							.col-md-4
+								+productCatalog("img/bric-product2.png")
+							.col-md-4
+								+productCatalog("img/bric-product3.png")
+						nav.pagination
+							.nav-links
+								a(href="#").pagination-prev.pagin-hide
+									img(src="img/pagination-arrow.png", alt="")
+								a(href="#").active 1
+								a(href="#") 2
+								a(href="#").pagination-next
+									img(src="img/pagination-arrow.png", alt="")
+
+		include include/_blog-stein

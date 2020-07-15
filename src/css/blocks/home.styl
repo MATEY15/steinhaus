@@ -1,0 +1,931 @@
+.section--home-slider
+	padding-top 85px
+	
+.slider-home--top-wrapper
+	position relative
+	
+	.slick-dots
+		position absolute
+		top 50%
+		right 0
+		tt(0,-50%)
+		li
+			width: 5px
+			height: 34px
+			border-radius: 2px
+			background-color: #f5f5f5
+			margin 8px 0
+			trn(.2s)
+			cursor pointer
+			&.slick-active,
+			&:hover
+				background: #f60e18
+			button
+				font-size 0
+
+.slider-top-nav
+	position absolute
+	left 0
+	bottom 0
+	max-width 286px
+
+.home-top--navigate-slider
+	display flex
+	flex-direction row
+	justify-content space-between
+	max-width 180px
+	margin 12px auto 0
+	.slick-arrow
+		cursor pointer
+		&:hover
+			svg
+				fill #f8484f
+		svg
+			fill #ccc
+			trn(.2s)
+	.top-sliser--next
+		svg
+			transform rotateY(180deg)
+
+// .home-top--navigate-slider
+// 	svg
+// 		fill #ccc
+
+.slider-top--counter
+	display flex
+	.slider-top--counter-cout,
+	.slider-top--counter-all
+		color: #8e8e8e
+		font-size: 20px
+		font-weight: 400
+		letter-spacing: 1px
+		span
+			display inline-block
+			min-width 28px
+	.slider-top--counter-cout
+		display flex
+		flex-direction row
+		align-items center
+		position relative
+		color: #f61922
+		&:after
+			display block
+			content ''
+			top 0
+			right 0
+			width 180px
+			height 1px
+			background-color: #cccccc
+			margin 0 25px
+
+.slider-home--items
+	position relative
+	display flex !important
+	justify-content flex-end
+	align-items flex-end
+	flex-direction row
+	min-height 540px
+	
+	// &:before
+	// 	position absolute
+	// 	display block
+	// 	content ''
+	// 	top 0
+	// 	right 42px
+	// 	width 100%
+	// 	max-width: 769px
+	// 	height: 100%
+	// 	border-radius: 2px
+	// 	background-color: #fbfbfb
+	
+.slider-home--items-text
+	position absolute
+	top 0
+	left 0
+	height 100%
+	padding-top 85px
+	z-index 100
+	
+	.hide-blocks
+		overflow hidden
+	
+	.ofsset-title
+		margin-bottom 53px
+		
+	h3
+		color: #010101
+		font-size: 47px
+		font-weight: 800
+		line-height: 68px
+		letter-spacing: 2.35px
+
+.slider-home--items-img
+	padding-right 40px
+
+.slider-home--items .slider-home--items-img {
+	display: inline-block;
+	opacity: 0;
+	-webkit-animation: hideImage .5s;
+	animation: hideImage .5s;
+}
+.slider-home--items.slick-active .slider-home--items-img {
+	-webkit-animation: showImage .8s .5s forwards;
+	animation: showImage .8s .5s forwards;
+}
+
+.slider-home--items.slick-active .slider-home--items-text h3{
+	-webkit-animation: showText .8s .5s forwards;
+	animation: showText .8s .5s forwards;
+}
+.slider-home--items.slick-active .slider-home--items-text .button-red {
+	-webkit-animation: showText .7s .4s forwards;
+	animation: showText .7s .4s forwards;
+}
+.slider-home--items .slider-home--items-text h3,
+.slider-home--items .slider-home--items-text .button-red {
+	opacity: 0;
+	-webkit-animation: hideText .6s;
+	animation: hideText .6s;
+}
+
+.scroll--home-section
+	text-align center
+	padding-top 40px
+	margin-bottom 70px
+	.scroll-click
+		display flex
+		flex-direction column
+		align-items center
+	.mause-icon
+		margin-bottom 9px
+	.icon-maus
+		margin-bottom 9px
+		width 26px
+		height 44px
+	.icon-down
+		max-width 18px
+
+@-webkit-keyframes showImage {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(16%, 0px, 0px);
+		-ms-transform: translate3d(16%, 0px, 0px);
+		transform: translate3d(16%, 0px, 0px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0px, 0px);
+		-ms-transform: translate3d(0%, 0px, 0px);
+		transform: translate3d(0%, 0px, 0px);
+	}
+}
+@keyframes showImage {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(16%, 0px, 0px);
+		-ms-transform: translate3d(16%, 0px, 0px);
+		transform: translate3d(16%, 0px, 0px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0px, 0px);
+		-ms-transform: translate3d(0%, 0px, 0px);
+		transform: translate3d(0%, 0px, 0px);
+	}
+}
+@-webkit-keyframes hideImage {
+	0% {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0px, 0px);
+		-ms-transform: translate3d(0%, 0px, 0px);
+		transform: translate3d(0%, 0px, 0px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(16%, 0px, 0px);
+		-ms-transform: translate3d(16%, 0px, 0px);
+		transform: translate3d(16%, 0px, 0px);
+	}
+}
+@keyframes hideImage {
+	0% {
+		opacity: 1;
+		-webkit-transform: translate3d(0%, 0px, 0px);
+		-ms-transform: translate3d(0%, 0px, 0px);
+		transform: translate3d(0%, 0px, 0px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(16%, 0px, 0px);
+		-ms-transform: translate3d(16%, 0px, 0px);
+		transform: translate3d(16%, 0px, 0px);
+	}
+}
+
+@-webkit-keyframes hideText {
+	0% {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0%, 0px);
+		-ms-transform: translate3d(0px, 0%, 0px);
+		transform: translate3d(0px, 0%, 0px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0px, 100%, 0px);
+		-ms-transform: translate3d(0px, 100%, 0px);
+		transform: translate3d(0px, 100%, 0px);
+	}
+}
+@keyframes hideText {
+	0% {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0%, 0px);
+		-ms-transform: translate3d(0px, 0%, 0px);
+		transform: translate3d(0px, 0%, 0px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0px, 100%, 0px);
+		-ms-transform: translate3d(0px, 100%, 0px);
+		transform: translate3d(0px, 100%, 0px);
+	}
+}
+@-webkit-keyframes showText {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0px, 100%, 0px);
+		-ms-transform: translate3d(0px, 100%, 0px);
+		transform: translate3d(0px, 100%, 0px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0%, 0px);
+		-ms-transform: translate3d(0px, 0%, 0px);
+		transform: translate3d(0px, 0%, 0px);
+	}
+}
+@keyframes showText {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0px, 100%, 0px);
+		-ms-transform: translate3d(0px, 100%, 0px);
+		transform: translate3d(0px, 100%, 0px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0px, 0%, 0px);
+		-ms-transform: translate3d(0px, 0%, 0px);
+		transform: translate3d(0px, 0%, 0px);
+	}
+}
+
+
+// Lego Brick
+
+.section--lego-brick
+	overflow hidden
+
+.lego-brick--top
+	background-color: #fbfbfb
+	padding-top 34px
+	
+	.heading-default
+		margin-bottom 26px
+
+.lego-brick--img
+	text-align center
+	img
+		max-width 100%
+		width 100%
+
+.heading-default
+	&.heading-center
+		text-align center
+		.heading-default--link
+			justify-content center
+	h2, h3, h4
+		color: #010101
+		font-size: 40px
+		font-weight: 800
+		line-height: 68px
+		letter-spacing: 2px
+
+.heading-default--link
+	display flex
+	li
+		a
+			position relative
+			display inline-block
+			color: #8c8c8c
+			font-size: 18px
+			font-weight: 300
+			line-height: 68px
+			letter-spacing: 0.9px
+			text-decoration none
+			trn(.2)
+			&:hover
+				text-decoration underline
+			&:after
+				display inline-block
+				width: 20px
+				height: 9px
+				content ''
+				background-image: url(../img/icon/arrow-red--small.png)
+				margin-left 10px
+		
+		&:not(:last-child)
+			margin-right 105px
+
+.lego-brick--content
+	margin-top 50px
+	.lego-brick--content-wrapper
+		display flex
+		flex-direction row
+		margin 0 -15px
+		
+		.lego-brick--content-items
+			width calc(100% / 3)
+			padding 0 15px
+			
+			&.lego-brick--sertificat
+				display flex
+				align-items center
+
+.wrapper-sertificat
+	width 100%
+	.list-sertificat
+		border-top 1px solid #f5f5f5
+		li
+			display flex
+			align-items center
+			border-bottom 1px solid #f5f5f5
+			color: #010101
+			font-size: 14px
+			font-weight: 800
+			letter-spacing: 0.7px
+			padding 14px 0
+			a
+				color: #010101
+				font-size: 14px
+				font-weight: 800
+				letter-spacing: 0.7px
+				text-decoration none
+				&:hover
+					text-decoration underline
+			img
+				margin-right 26px
+
+.brick-color--item
+	min-height: 364px
+	max-width 450px
+	border-radius: 3px
+	background-color: #fbfbfb
+	padding 30px
+	display flex
+	// margin 0 auto
+	flex-direction column
+	justify-content space-between
+	align-items flex-start
+	overflow hidden
+	
+	&:hover
+		.in-catalog,
+		.button.button-red
+			opacity 1
+			visibility visible
+		
+		.brick-color--img
+			img
+				transform: translate(50%, -20px) scale(1.1);
+	
+	.button.button-red
+		opacity 0
+		visibility hidden
+		
+	.in-catalog
+		display inline-block
+		color: #9b9b9b
+		font-size: 14px
+		font-weight: 300
+		letter-spacing: 0.7px
+		margin-top 14px
+		opacity 0
+		visibility hidden
+		trn(.4s)
+	
+	.brick-color--img
+		position relative
+		min-height 200px
+		width 100%
+		img
+			position: absolute
+			object-fit: contain
+			width: 100%
+			height: 100%
+			trn(.35s)
+
+
+// Product
+
+.section--new-catalog
+	padding-top 32px
+	padding-bottom 50px
+	.heading-default
+		margin-bottom 20px
+
+.new-catalog--wrapper
+	position relative
+	&:hover
+		.new-catalog--prev,
+		.new-catalog--next
+			opacity 1
+			visibility visible
+	
+.new-catalog--navigate
+	position absolute
+	top 0
+	width 100%
+	
+	.new-catalog--prev,
+	.new-catalog--next
+		position absolute
+		display flex
+		justify-content center
+		align-items center
+		height 100%
+		width 125px
+		min-height 460px
+		background: rgba(0, 0, 0, 0.1)
+		cursor pointer
+		trn(.2s)
+		opacity 0
+		visibility hidden
+		
+		svg
+			fill #fff
+			width 72px
+			height 33px
+	
+	.new-catalog--prev
+		left 0
+	.new-catalog--next
+		right 0
+		svg
+			transform rotateY(180deg)
+
+.new-catalog--items
+	margin-right 49px
+
+.product-catalog
+	display flex
+	flex-direction column
+	justify-content space-between
+	max-width: 380px
+	width 380px
+	min-height: 460px
+	border-radius: 3px
+	background-color: #fbfbfb
+	padding 20px 30px 25px
+
+.product-info
+	display flex
+	flex-wrap wrap
+	margin-bottom 20px
+	margin -5px
+	li
+		display flex
+		align-items center
+		color: #010101
+		font-size: 12px
+		font-weight: 300
+		min-height: 36px
+		border-radius: 3px
+		padding 10px
+		background-color: #f2f2f2
+		margin 5px
+		&:not(:last-child)
+			// margin-right 10px
+		img
+			margin-right 10px
+		svg
+			margin-right 10px
+		span
+			color #6b6b6b
+			
+.icon-all
+	width 14px
+	height 15px
+.icon-marka
+	width 15px
+	height 15px
+.icon-palete
+	width 20px
+	height 11px
+.icon-size,
+.icon-type
+	width 15px
+	height 15px
+.icon-struktur
+	width 14px
+	height 14px
+
+
+.icon-calc1
+	width 39px
+	height 31px
+
+.product-images
+	position relative
+	display flex
+	justify-content center
+	min-height 150px
+	margin-bottom 20px
+	img
+		position absolute
+		left 0
+		top 0
+		object-fit contain
+		width 100%
+		height 100%
+
+.product-contents
+	.category
+		display block
+		text-decoration none
+		color: #a8a8a8
+		font-size: 12px
+		font-weight: 500
+		margin-bottom 7px
+	.name
+		display block
+		color: #010101
+		font-size: 16px
+		font-weight: 300
+		text-decoration none
+
+.product-price
+	margin-top 27px
+	.price
+		color: #343434
+		font-size: 18px
+		font-weight: 800
+		margin-bottom 10px
+	.button
+		display flex
+		justify-content center
+		align-items center
+		width 100%
+		
+		&:hover
+			.icon-back
+				fill #fff
+		
+		.icon-back
+			position absolute
+			right 18px
+			height 12px
+			fill #F6050F
+			transform rotateY(180deg)
+			trn(.2s)
+		
+// Uniqueness Section
+
+.section-uniqueness
+	padding-top 55px
+	
+	.heading-default
+		margin-bottom 34px
+
+.uniqueness-wrapper
+	display flex
+	flex-direction row
+
+.uniqueness-wrapper--info-text
+	width 30%
+	padding-left 30px
+	
+	h3
+		color: #010101
+		font-size: 40px
+		font-weight: 800
+		margin-bottom 30px
+		word-wrap: break-word
+	p
+		color: #010101
+		font-size: 16px
+		font-weight: 300
+		line-height: 25px
+		margin-bottom 10px
+	
+	ul
+		li
+			position relative
+			color: #010101
+			font-size: 14px
+			font-weight: 800
+			padding-left 20px
+			&:before
+				position absolute
+				content ''
+				left 0
+				top 4px
+				width: 8px
+				height: 8px
+				background-color: #f6121c
+				brr(50%)
+			&:not(:last-child)
+				margin-bottom 18px
+
+.uniqueness-wrapper--table-img
+	display flex
+	flex-wrap wrap
+	margin 0 -15px
+	max-width 960px
+	width 70%
+	
+	.uniqueness-items
+		position relative
+		width 50%
+		padding 0 15px
+		margin-bottom 48px
+		&--full
+			width 100%
+			margin-bottom 0
+
+.uniqueness-items
+	.uniqueness-items--img
+		position relative
+		min-height 345px
+		font-size 0
+		img
+			position absolute
+			width 100%
+			height 100%
+			object-fit cover
+			top 0
+			left 0
+	.uniqueness-items--content
+		position absolute
+		left 0
+		bottom 0
+		background: rgba(19, 19, 19, 0.4)
+		color #fff
+		padding 16px
+		display flex
+		width 100%
+		max-width 570px
+		
+		.count
+			font-size: 40px
+			line-height 36px
+			font-weight: 800
+			margin-right 30px
+		.text
+			h4
+				font-size: 16px
+				font-weight: 800
+				margin-bottom 10px
+			p
+				font-size: 14px
+				font-weight: 500
+
+// Built Objects
+
+.section--built-objects
+	padding-top 103px
+
+.built-objects--wrapper
+	display flex
+	
+	.built-objects--slider-big
+		width 57%
+	.built-objects--slider-small
+		width 43%
+
+.built-objects--slider-small
+	display flex
+	flex-direction column
+	justify-content space-between
+	.built-slider--small-item
+		position relative
+		height 360px
+		img
+			position absolute
+			height 100%
+			width 100%
+			top 0
+			left 0
+			object-fit cover
+
+.built-objects--slider-big
+	.built-slider--big-item
+		position relative
+		height 590px
+		img
+			position absolute
+			height 100%
+			width 100%
+			top 0
+			left 0
+			object-fit cover
+
+.built-object--head
+	padding-top 24px
+	padding-left 30px
+	.big-red
+		color: rgba(245, 6, 16, 0.1)
+		font-size: 80px
+		font-weight: 800
+		line-height: 68px
+		margin-bottom 8px
+	h4
+		color: #010101
+		font-size: 40px
+		font-weight: 800
+		line-height: 68px
+
+.built-objects--navigate
+	max-width 210px
+	display flex
+	align-items center
+	justify-content space-between
+	margin 24px 0 0
+	
+	.built-objects--prev,
+	.built-objects--next
+		cursor pointer
+		&:hover
+			svg
+				fill #F8474D
+		svg
+			fill #ccc
+			trn(.2s)
+	.built-objects--next
+		svg
+			transform rotateY(180deg)
+
+
+// Line
+
+.section--line-steinhaus
+	padding-top 110px
+	.number-section
+		padding-top 70px
+		padding-bottom 70px
+.line-steinhaus--wrapper
+	display flex
+	
+	.line-steinhaus--content
+		width 42%
+		padding-right 40px
+		h3
+			color: #010101
+			font-size: 40px
+			font-weight: 800
+			margin-bottom 36px
+		p
+			font-size: 16px
+			font-weight: 300
+			line-height: 25px
+			&:not(:last-child)
+				margin-bottom 23px
+
+	.line-steinhaus--images
+		width 58%
+		img
+			max-width 100%
+
+.number-section
+	display flex
+	flex-direction row
+	justify-content space-around
+	flex-wrap wrap
+
+.number-section--items
+	text-align center
+	padding-top 24px
+	width calc(100% / 4)
+	margin-bottom 20px
+	.number-bold
+		display inline-block
+		position relative
+		color: #666666
+		font-size: 52px
+		font-weight: 800
+		line-height: 68px
+		z-index 100
+		&:after
+			position absolute
+			top -24px
+			left 50%
+			display inline-block
+			content ''
+			width: 1px
+			height: 26px
+			background-color: #f51821
+			tt(-50%, 0)
+		&:before
+			position absolute
+			left 50%
+			top -18px
+			content attr(data-before)
+			color: #f6f6f6
+			font-size: 72px
+			z-index -1
+			tt(-50%, 0)
+	
+	.description-text
+		font-size: 14px
+		font-weight: 400
+
+.default--date-more
+	display flex
+	flex-direction row
+	justify-content space-between
+	.date,
+	.more
+		font-size 14px
+		color #fff
+		text-decoration none
+		font-weight 300
+	
+	.more:after
+		display: inline-block
+		width: 20px
+		height: 9px
+		content: ''
+		background-image: url(../img/icon/arrow-red--small.png)
+		margin-left: 10px
+
+.section--blog-steinhaus
+	// background: #fbfbfb
+	padding-top 33px
+	padding-bottom 44px
+	margin-bottom 25px
+
+.blog-steinhaus
+	display flex
+	
+.blog-steinhaus--big-post
+	position relative
+	width 40%
+	.blog-black--desc
+		position absolute
+		left 0
+		bottom 0
+		width 100%
+		min-height: 107px
+		background-color: rgba(19, 19, 19, 0.4)
+		color #fff
+		padding 22px 30px 24px
+		a.blog-black--desc-name
+			display block
+			color: #ffffff
+			font-size: 16px
+			font-weight: 800
+			text-decoration none
+			margin-bottom 28px
+
+.image--blog-steinhaus
+	position relative
+	min-height 396px
+	height 100%
+	img
+		position: absolute
+		width: 100%
+		height: 100%
+		object-fit: cover
+		top: 0
+		left: 0
+
+.blog-steinhaus--list-post
+	width 60%
+
+.list--blog-steinhaus
+	padding-left 30px
+	
+	li
+		border-bottom 1px solid #e1e1e1
+		padding-top 15px
+		padding-bottom 27px
+		&:not(:last-child)
+			margin-bottom 18px
+	
+	.name--blog-steinhaus
+		display block
+		color: #000000
+		font-size: 16px
+		font-weight: 800
+		text-decoration none
+		margin-bottom 35px
+		&:hover
+			text-decoration underline
+	
+	.default--date-more
+		padding-left 10px
+		padding-right 25px
+		.date,
+		.more
+			color: #8b8b8b
+			font-size: 14px
+			font-weight: 300

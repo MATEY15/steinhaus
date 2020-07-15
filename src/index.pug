@@ -1,0 +1,34 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section-links
+			.container
+				ul.list-links
+					li
+						a(href="home.html" target="_blank") Главная
+					li
+						a(href="news.html" target="_blank") Новости
+					li
+						a(href="post.html" target="_blank") Пост новости
+					li
+						a(href="catalog-brick.html" target="_blank") Каталог кирпича
+					li
+						a(href="brick-product.html" target="_blank") Продукт (кирпич)
+					li
+						a(href="shipping-payment.html" target="_blank") Доставка и оплата
+					li
+						a(href="contact.html" target="_blank") Контакты
+					li
+						a(href="build.html" target="_blank") Производство
+					li
+						a(href="about.html" target="_blank") О нас
+					li
+						a(href="dealers.html" target="_blank") Дилеры

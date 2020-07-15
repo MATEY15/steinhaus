@@ -1,0 +1,176 @@
+extends layout.pug
+
+block variabl
+	- var title = "SteinHaus"
+
+block header
+	include include/header
+
+block main
+	main.section_main
+
+		section.section--home-slider
+			.container
+				.slider-home--top-wrapper
+					.slider-home--top
+						+topSlider()
+						+topSlider()
+						+topSlider()
+
+					.slider-top-nav
+						.slider-top--counter
+							.slider-top--counter-cout
+								span 01
+							.slider-top--counter-all
+								span
+						.home-top--navigate-slider
+				
+				.scroll--home-section
+					a(href="#lego-brick").scroll-click
+						img(src="img/icon/mause-scroll.png", alt="").mause-icon
+						img(src="img/icon/arrow-scroll.png", alt="")
+
+		section.section--lego-brick#lego-brick
+			.lego-brick--top
+				.container
+					.heading-default.heading-center
+						h3 Лего кирпич
+						ul.heading-default--link
+							li
+								a(href="#") Подробнее
+							li
+								a(href="#") Каталог
+
+					.lego-brick--img
+						img(src="img/lego-brick--img.png", alt="")
+
+			.lego-brick--content
+				.container
+					.lego-brick--content-wrapper
+						.lego-brick--content-items.lego-brick--sertificat
+							.wrapper-sertificat
+								ul.list-sertificat
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия №1.pdf
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия №2.pdf
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия №3.pdf
+									li
+										img(src="img/icon/icon-sertificat.png", alt="")
+										a(href="#") Сертификат соответствия ГОСТ.pdf
+						.lego-brick--content-items
+							.brick-color--item
+								p.name--brick-color Одноцветный кирпич
+								span.in-catalog В каталоге 23 позиции
+								.brick-color--img
+									img(src="img/brick-color2.png", alt="")
+								a(href="#").button.button-red Перейти в каталог
+						.lego-brick--content-items
+							.brick-color--item
+								p.name--brick-color Двухцветный кирпич
+								span.in-catalog В каталоге 23 позиции
+								.brick-color--img
+									img(src="img/brick-color2.png", alt="")
+								a(href="#").button.button-red Перейти в каталог
+
+		section.section--new-catalog
+			.container
+				.heading-default
+					h3 Новинки в каталоге
+				.new-catalog--wrapper
+					.new-catalog--slider
+						.new-catalog--items
+							+productCatalog("img/bric-product1.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product2.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product3.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product1.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product2.png")
+						.new-catalog--items
+							+productCatalog("img/bric-product3.png")
+
+					.new-catalog--navigate
+
+		section.section-uniqueness
+			.container
+				.uniqueness-wrapper
+					.uniqueness-wrapper--table-img
+						.uniqueness-items
+							.uniqueness-items--img
+								img(src="img/brick-unik1.png", alt="")
+								.uniqueness-items--content
+									span.count 01
+									.text
+										h4 Уникальная “лего” форма
+										p Соединение шип-паз обеспечивает #[br] быструю укладку и точную фиксацию
+						.uniqueness-items
+							.uniqueness-items--img
+								img(src="img/brick-unik2.png", alt="")
+								.uniqueness-items--content
+									span.count 02
+									.text
+										h4 Высокий уровень прочности
+										p Уникальная технология изготовления придает кирпичу высокую прочность
+						.uniqueness-items.uniqueness-items--full
+							.uniqueness-items--img
+								img(src="img/brick-unik3.png", alt="")
+								.uniqueness-items--content
+									span.count 03
+									.text
+										h4 Разнообразные цветовые решения
+										p Более 50 цветовых оттенков кирпича, изготовим #[br] кирпич любого цвета на заказ.
+
+					.uniqueness-wrapper--info-text
+						h3 Уникальность лего кирпича
+						p Text Custome
+						p Технология производство лего кирпича, позволяет создать кирпич с уникальными свойствами, средни них:
+						.height-30
+						ul
+							li Уникальное соединение шип-паз;
+							li Ускоренная кладка, до 3-х раз быстрее;
+							li Высокая прочность более ХХХХХХ;
+							li Морозостойкость. Кладка в любое время года;
+							li Водопоглощение 5-6%. Применяется в любом климате;
+							li Уникальяная кладка кирпича без швов.
+
+		include include/_build-slider
+						
+		section.section--line-steinhaus
+			.container
+				.line-steinhaus--wrapper
+					.line-steinhaus--content
+						h3 Производственная линия STEINHAUS
+						p Высокое качество не достигается случайно - это всегда совокупность результатов большого труда, технологий и желания развиваться. Каждый день, команда STEINHAUS, делает все, для того чтобы вы получали качественный кирпич для реализации своих объектов. 
+						p Благодаря современным производственным линиям мы готовы предоставлять вам лучший продукт на рынке. Каждый день мы становимся эффективней, и стремится к самому лучше вместе со своими партнерами.
+						p Мы команда “STEINHAUS”
+						a(href="#").button.button-red Подробнее о линии
+					.line-steinhaus--images
+						img(src="img/line-steinhaus.jpg", alt="")
+
+				.number-section
+					.number-section--items
+						p(data-before="8000+").number-bold 8000+
+						p.description-text Кирпичей производим в день
+					.number-section--items
+						p(data-before="3").number-bold 3
+						p.description-text года опыта
+					.number-section--items
+						p(data-before="35+").number-bold 35+
+						p.description-text установленных линий
+					.number-section--items
+						p(data-before="100+").number-bold 100+
+						p.description-text партнеров
+
+		include include/_blog-stein
+
+		//- .container
+		//- 	h1 12345
+
+		//- 	+iconSvg('34', '32', '0 0 34 32', 'icon-star')

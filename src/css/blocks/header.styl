@@ -1,0 +1,181 @@
+.header
+	position relative
+	padding-top 20px
+	z-index 1000
+	
+	.flex-container
+		display flex
+		flex-wrap wrap
+		flex-direction row
+		justify-content space-between
+		align-items center
+
+.logo
+	display flex
+	flex-direction row
+	align-items center
+	.logo-link
+		display inline-block
+
+.phone-dropdown:after
+	margin-left 10px
+
+.drop-phone
+	position relative
+	display inline-block
+	margin-left 45px
+	.link-phones
+		color: #232323
+		font-size: 18px
+		font-weight: 300
+		line-height: 26px
+		letter-spacing: 0.9px
+		text-decoration none
+		span
+			color: #f50a14 !important
+	&:hover
+		.list-phones
+			opacity 1
+			visibility visible
+			transform translate(0, 0px)
+
+.list-phones
+	position absolute
+	top 100%
+	left 0
+	padding-top 14px
+	transform translate(0, 24px)
+	trn(.2s)
+	opacity 0
+	visibility hidden
+	ul
+		min-width 200px
+		padding 20px
+		box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2)
+		border-radius: 3px
+		background-color: #ffffff
+		li
+			&:not(:last-child)
+				margin-bottom 20px
+			span
+				color: #232323
+				font-family: Montserrat
+				font-size: 16px
+				font-weight: 300
+				line-height: 26.02px
+				letter-spacing: 0.8px
+					
+		a.link-phones
+			font-size 16px
+	
+	.name-category
+		color: #f6050f
+		font-family: Montserrat
+		font-size: 14px
+		letter-spacing: 0.7px
+
+.burger-menu
+	display none
+	flex-direction column
+	span
+		width 22px
+		height 2px
+		background: #232323
+		&:not(:last-child)
+			margin-bottom 4px
+
+.closed-burger
+	position absolute
+	top 38px
+	right 10px
+	display none
+	flex-direction column
+	justify-content center
+	height 22px
+	width 22px
+	span
+		position absolute
+		width 22px
+		height 2px
+		background: #232323
+		&:first-child
+			transform rotate(45deg)
+		&:last-child
+			transform rotate(-45deg)
+
+.top-menu--wrapper
+	flex-grow 1
+
+.top-menu
+	display flex
+	flex-direction row
+	justify-content center
+	&>li
+		&>a:before
+			position absolute
+			bottom -4px
+			left 0
+			content ''
+			display inline-block
+			width 0px
+			height 2px
+			background: #f6050f
+			trn(.2s)
+		&:hover a:before,
+		&.active a:before
+			width 30px
+	li
+		position relative
+		&:not(:last-child)
+			margin-right 72px
+		a
+			position relative
+			color: #232323
+			font-family: Montserrat
+			font-size: 16px
+			font-weight: 500
+			line-height: 26px
+			text-decoration none
+		
+		&:hover .sub-menu
+			transform translate(0, 0px)
+			opacity 1
+			visibility visible
+	
+		.sub-menu
+			position absolute
+			padding-top 12px
+			transform translate(0, 24px)
+			opacity 0
+			visibility hidden
+			trn(.2s)
+			ul
+				min-width 236px
+				padding 20px
+				box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2)
+				border-radius: 3px
+				background-color: #ffffff
+				li
+					margin-right 0
+					&:not(:last-child)
+						margin-bottom 13px
+					a
+						font-weight 300
+						trn(.2s)
+					&:hover a
+						color: #f6050f
+
+.phone-head
+	padding-top 28px
+
+.phone-link
+	color: #52565f
+	font-family: mb
+	font-size: 14px
+	text-decoration none
+	display flex
+	flex-direction row
+	align-items center
+	
+	& .icon-phone
+		margin-right 8px
