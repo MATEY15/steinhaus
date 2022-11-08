@@ -8,7 +8,7 @@
     "browser-sync": "^2.24.5",
     "autoprefixer": "^8.6.5",
     "bem-pug-mixins": "^1.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
     "gulp-imagemin": "^4.1.0",
